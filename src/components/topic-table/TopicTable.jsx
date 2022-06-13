@@ -7,7 +7,7 @@ const TopicTable = props => {
       <table className="table">
         <thead className="table__header-wrapper">
           <tr className="table__header-row">
-            <th className="table__header table__header-1">Name</th>
+            <th className="table__header table__header-1">Concept</th>
             <th className="table__header table__header-2">Description</th>
             <th className="table__header table__header-3">Resources</th>
           </tr>
