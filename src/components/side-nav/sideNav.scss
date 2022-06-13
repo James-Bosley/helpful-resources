@@ -1,0 +1,26 @@
+@use "../../styles/partials/" as *;
+
+.side-nav__container {
+  margin-left: 3.6rem;
+  margin-right: 3.6rem;
+  width: 18%;
+}
+
+.side-nav__list {
+  list-style-type: none;
+}
+
+.side-nav__item {
+  color: $secondary-color-dark;
+  @include section-header;
+  font-size: 2rem;
+  padding: 1rem;
+  border: 1px solid $secondary-color-highlight;
+  
+}
+
+.side-nav__topic-container {
+  padding: 4rem;
+  color: $secondary-color-light;
+  background-color: navy;
+}
