@@ -1,0 +1,14 @@
+@use "../../styles/partials/" as *;
+
+.thead {
+}
+.table {
+  &__header {
+    &-row {
+      display: flex;
+    }
+    &-wrapper {
+      display: flex;
+    }
+  }
+}
