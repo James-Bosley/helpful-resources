@@ -22,7 +22,7 @@ const App = () => {
   return (
     <>
       <Header />
-      <main>
+      <main className="main-container">
         <SideNav list={subjectList} />
         <Routes>
           <Route path="/" element={<Home />} />
