@@ -3,44 +3,25 @@
 .table {
   margin-top: 4rem;
   border-collapse: collapse;
-  border: 2px solid rgb(200, 200, 200);
-  display: flex;
-  flex-direction: column;
-
-  &__wrapper {
-    padding: 1.5rem;
-    display: flex;
-  }
+  // border: 2px solid rgb(200, 200, 200);
 
   &__header {
-    font-size: 2.3rem;
-    &-1 {
-      margin-right: 17.5rem;
-    }
-    &-2 {
-      margin-right: 10rem;
-    }
-    &-3 {
-      margin-left: 10rem;
-    }
-    &-row {
-      display: flex;
-    }
-    &-wrapper {
-      padding: 2rem;
-      display: flex;
-    }
+    @include page-header;
+    border-bottom: 1px solid rgb(200, 200, 200);
+    background-color: #fafafa;
+    text-align: left;
+    padding: 2rem;
   }
+
   &__details {
     border-collapse: collapse;
-    border: 2px solid rgb(200, 200, 200);
+    // border: 2px solid rgb(200, 200, 200);
     padding: 2rem;
 
     &--1 {
       font-size: 2rem;
       font-weight: 600;
       width: 20%;
-      background-color: #fafafa;
     }
     &--2 {
       width: 30%;
@@ -48,10 +29,11 @@
     }
     &--3 {
       width: 50%;
-      background-color: #fafafa;
+
       font-weight: 400;
     }
   }
+
   &__list {
     text-decoration: none;
     list-style-type: none;
@@ -63,7 +45,10 @@
   }
   &__row-body {
     border-collapse: collapse;
-    border: 2px solid rgb(200, 200, 200);
+    // border: 2px solid rgb(200, 200, 200);
     margin: 2rem;
+    &:nth-child(even) {
+      background-color: #fafafa;
+    }
   }
 }
