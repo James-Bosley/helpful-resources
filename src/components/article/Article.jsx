@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
 import { getSingleArticle } from "../../util/api.mjs";
+import { useParams } from "react-router-dom";
 import "./article.scss";
 
 const Article = props => {
@@ -10,9 +11,11 @@ const Article = props => {
     setArticle(response);
   }, []);
 
+  let { articleName } = useParams();
+
   useEffect(() => {
-    getArticle(props.match.params.article);
-  }, [getArticle, props.match.params.article]);
+    getArticle(articleName);
+  }, [getArticle, articleName]);
 
   if (!article) return <h2>Loading...</h2>;
 

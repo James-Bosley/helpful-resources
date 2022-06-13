@@ -26,7 +26,7 @@ const App = () => {
         <SideNav list={subjectList} />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/:article" element={<Article />} />
+          <Route path=":articleName" element={<Article />} />
         </Routes>
       </main>
     </>
