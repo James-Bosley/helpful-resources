@@ -1,10 +1,11 @@
 import React from "react";
+import "./TopicTable.scss";
 
 const TopicTable = (props) => {
   return (
     <div>
       <table>
-        <thead>
+        <thead className="table__header-wrapper">
           <tr className="table__header-row">
             <th className="table__header">Name</th>
             <th className="table__header">Description</th>
@@ -18,11 +19,13 @@ const TopicTable = (props) => {
                 <td className="table__details"> {key.name}</td>
                 <td className="table__details">{key.description}</td>
                 <td className="table__details">
-                  {key.resources.map(() => {
+                  {key.resources.map((link) => {
                     return (
                       <ul>
                         <li>
-                          <a href={key.resources}>{key.resources}</a>
+                          <a href={link} target="_blank" rel="noreferrer">
+                            {link}
+                          </a>
                         </li>
                       </ul>
                     );
