@@ -4,14 +4,20 @@ import "./TopicTable.scss";
 const TopicTable = (props) => {
   return (
     <div>
-      <table className="table__wrapper">
-        <thead className="table__header-wrapper">
+      <table className="table">
+        {/* <thead className="table__header-wrapper"> */}
+        <div className="table__wrapper">
           <tr className="table__header-row">
-            <th className="table__header">Name</th>
-            <th className="table__header">Description</th>
-            <th className="table__header">Resources</th>
+            <th className="table__header table__header-1">Name</th>
           </tr>
-        </thead>
+          <tr className="table__header-row">
+            <th className="table__header table__header-2">Description</th>
+          </tr>
+          <tr className="table__header-row">
+            <th className="table__header table__header-3">Resources</th>
+          </tr>
+        </div>
+        {/* </thead> */}
         <tbody>
           {props.topics.map((key) => {
             return (
