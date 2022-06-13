@@ -1,0 +1,97 @@
+@use "./colors" as *;
+@use "./breakpoints" as *;
+
+// Typeface imports, with fallback options.
+// The .ttf fonts matched the mockups more closely, so those are the primary choice.
+
+@font-face {
+  font-family: "Avenir Next";
+  src: url("../../assets/fonts/AvenirNextLTPro.ttf") format("truetype"),
+    url("../../assets/fonts/fallback-fonts/AvenirNextLTPro-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Avenir Next";
+  src: url("../../assets/fonts/AvenirNextLTProDemi.ttf") format("truetype"),
+    url("../../assets/fonts/fallback-fonts/AvenirNextLTPro-Demi.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Avenir Next";
+  src: url("../../assets/fonts/AvenirNextLTProBold.ttf") format("truetype"),
+    url("../../assets/fonts/fallback-fonts/AvenirNextLTPro-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: fallback;
+}
+
+// Define site wide primary font here. Further web-safe fallbacks set.
+
+$primary-font: "Avenir Next", "Verdana", sans-serif;
+
+// Creates fonts with a mobile first context.
+
+@mixin page-header($color: $primary-color-dark) {
+  font-family: $primary-font;
+  color: $color;
+  font-weight: 600;
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+
+  @include media-tablet {
+    font-size: 3.3rem;
+    line-height: 4.4rem;
+  }
+}
+
+@mixin section-header($color: $primary-color-dark) {
+  font-family: $primary-font;
+  color: $color;
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 2rem;
+
+  @include media-tablet {
+    font-size: 1.2rem;
+  }
+}
+
+@mixin sub-header($color: $primary-color-dark) {
+  font-family: $primary-font;
+  color: $color;
+  font-weight: 600;
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+
+  @include media-tablet {
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+  }
+}
+
+@mixin body-copy($color: $primary-color-dark) {
+  font-family: $primary-font;
+  color: $color;
+  font-weight: 400;
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+
+  @include media-tablet {
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+  }
+}
+
+@mixin label-button-copy($color: $primary-color-dark) {
+  font-family: $primary-font;
+  color: $color;
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 2rem;
+}

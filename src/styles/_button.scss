@@ -1,0 +1,30 @@
+@use "./partials/" as *;
+
+// Standard button element.
+
+@mixin button {
+  @include flex(center, center);
+  @include label-button-copy($primary-color-light);
+  font-weight: 400;
+  height: 4rem;
+  min-width: 1.5rem;
+  padding: 0.2rem 3.2rem 0 3.2rem;
+  text-transform: uppercase;
+  background-color: $primary-color-brand;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $secondary-color-brand;
+    outline: none;
+    box-shadow: 1px 2px 2px $primary-color-highlight;
+  }
+
+  &:active {
+    position: relative;
+    top: 2px;
+    left: 1px;
+    box-shadow: none;
+  }
+}

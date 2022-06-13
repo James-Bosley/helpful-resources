@@ -1,0 +1,18 @@
+// Set responsive layout breakpoints.
+
+$tablet-break: 768px;
+$desktop-break: 1280px;
+
+// Media queries.
+
+@mixin media-tablet {
+  @media screen and (min-width: $tablet-break) {
+    @content;
+  }
+}
+
+@mixin media-desktop {
+  @media screen and (min-width: $desktop-break) {
+    @content;
+  }
+}
