@@ -8,7 +8,7 @@ const Header = () => {
         <div className="header__icon-container">
           <img src={logo} alt="Logo" className="header__icon" />
         </div>
-        <p className="header__title">Synapse - Helpful Resources</p>
+        <h1 className="header__title">Synapse - Helpful Resources</h1>
       </div>
     </div>
   );
