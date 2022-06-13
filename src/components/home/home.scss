@@ -1,0 +1,15 @@
+@use "../../styles/partials/" as *;
+
+.homepage {
+  margin: 3.6rem;
+  width: 60%;
+
+  &__title {
+    @include page-header;
+    margin-bottom: 1.6rem;
+  }
+
+  &__info {
+    margin-bottom: 1.6rem;
+  }
+}

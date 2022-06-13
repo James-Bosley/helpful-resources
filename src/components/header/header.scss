@@ -1,7 +1,20 @@
 @use "../../styles/partials/" as *;
 
 .header {
-  box-shadow: 0 0 4px 1px $primary-color-dark;
+  box-shadow: 0 0 4px 1px $primary-color-highlight;
+  z-index: 1000;
+
+  @keyframes pulse {
+    0% {
+      transform: scale(1) rotate(-10deg);
+    }
+    50% {
+      transform: scale(1.15) rotate(10deg);
+    }
+    100% {
+      transform: scale(1) rotate(-10deg);
+    }
+  }
 
   &__container {
     @include flex(initial, center);
@@ -12,11 +25,14 @@
   &__icon-container {
     height: 8rem;
     width: 8rem;
+    overflow: hidden;
   }
 
   &__icon {
     height: 100%;
     width: 100%;
+    border-radius: 50%;
+    animation: pulse infinite linear 5s;
   }
 
   &__title {

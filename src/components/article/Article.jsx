@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
 import { getSingleArticle } from "../../util/api.mjs";
 import { useParams } from "react-router-dom";
+import TopicTable from "../topic-table/TopicTable";
 import "./article.scss";
 
 const Article = props => {
@@ -17,9 +18,17 @@ const Article = props => {
     getArticle(articleName);
   }, [getArticle, articleName]);
 
-  if (!article) return <h2>Loading...</h2>;
+  if (!article) return <h2 className="placeholder">Loading...</h2>;
 
-  return <div>{article.title}</div>;
+  return (
+    <article className="article">
+      <h2 className="article__title">{article.title}</h2>
+      <p className="article__intro">{article.introduction}</p>
+      <div className="article__table-container">
+        <TopicTable topics={article.topics} />
+      </div>
+    </article>
+  );
 };
 
 export default Article;
