@@ -1,14 +1,28 @@
 @use "../../styles/partials/" as *;
 
 .table {
+  margin-top: 4rem;
+  border-collapse: collapse;
+  border: 2px solid rgb(200, 200, 200);
+  display: flex;
+  flex-direction: column;
+
   &__wrapper {
-    margin-top: 4rem;
-    border-collapse: collapse;
-    border: 2px solid rgb(200, 200, 200);
+    padding: 1.5rem;
+    display: flex;
   }
 
   &__header {
     font-size: 2.3rem;
+    &-1 {
+      margin-right: 17.5rem;
+    }
+    &-2 {
+      margin-right: 10rem;
+    }
+    &-3 {
+      margin-left: 10rem;
+    }
     &-row {
       display: flex;
     }
@@ -50,5 +64,6 @@
   &__row-body {
     border-collapse: collapse;
     border: 2px solid rgb(200, 200, 200);
+    margin: 2rem;
   }
 }
