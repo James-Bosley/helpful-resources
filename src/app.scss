@@ -1,1 +1,7 @@
 @use "./styles/partials/" as *;
+
+.main-container {
+  @include flex;
+  max-width: 140rem;
+  margin: 0 auto;
+}
