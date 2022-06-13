@@ -2,7 +2,7 @@
 
 .article {
   margin: 3.6rem;
-  width: 60%;
+  width: 80%;
 
   &__title {
     @include page-header;
@@ -13,10 +13,7 @@
     margin-bottom: 2.4rem;
   }
 
-  &__table-container {
-    border-top: 1px solid $primary-color-highlight;
-    width: 90%;
-    margin: 0 auto;
-    padding: 1.6rem 0;
+  &__info-container {
+    width: 75%;
   }
 }

@@ -22,11 +22,11 @@ const Article = props => {
 
   return (
     <article className="article">
-      <h2 className="article__title">{article.title}</h2>
-      <p className="article__intro">{article.introduction}</p>
-      <div className="article__table-container">
-        <TopicTable topics={article.topics} />
+      <div className="article__info-container">
+        <h2 className="article__title">{article.title}</h2>
+        <p className="article__intro">{article.introduction}</p>
       </div>
+      <TopicTable topics={article.topics} />
     </article>
   );
 };

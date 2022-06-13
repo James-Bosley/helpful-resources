@@ -3,10 +3,12 @@
 .table {
   margin-top: 4rem;
   border-collapse: collapse;
-  // border: 2px solid rgb(200, 200, 200);
+  border-radius: 4px;
+  border-bottom: 1px solid rgb(200, 200, 200);
 
   &__header {
     @include page-header;
+    font-size: 1.9rem !important;
     border-bottom: 1px solid rgb(200, 200, 200);
     background-color: #fafafa;
     text-align: left;
@@ -15,11 +17,11 @@
 
   &__details {
     border-collapse: collapse;
-    // border: 2px solid rgb(200, 200, 200);
+
     padding: 2rem;
 
     &--1 {
-      font-size: 2rem;
+      font-size: 1.9rem;
       font-weight: 600;
       width: 20%;
     }
@@ -29,7 +31,6 @@
     }
     &--3 {
       width: 50%;
-
       font-weight: 400;
     }
   }
