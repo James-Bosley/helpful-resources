@@ -9,11 +9,16 @@ import "./app.scss";
 
 const App = () => {
   const [subjectList, setSubjectList] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
 
   const getList = useCallback(async () => {
     const response = await getArticleList();
     setSubjectList(response);
   }, []);
+
+  const handleSearchInput = e => {
+    setSearchTerm(e.target.value);
+  };
 
   useEffect(() => {
     getList();
@@ -21,9 +26,9 @@ const App = () => {
 
   return (
     <>
-      <Header />
+      <Header searchTerm={searchTerm} handleChange={handleSearchInput} />
       <main className="main-container">
-        <SideNav list={subjectList} />
+        <SideNav list={subjectList} searchTerm={searchTerm} />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path=":articleName" element={<Article />} />
