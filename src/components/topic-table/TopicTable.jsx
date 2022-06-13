@@ -1,6 +1,6 @@
 import React from "react";
 
-export const TopicTable = (props) => {
+const TopicTable = (props) => {
   return (
     <div>
       <table>
@@ -12,10 +12,12 @@ export const TopicTable = (props) => {
           </tr>
         </thead>
         <tbody>
-          {props.topic.map((key) => {
+          {props.topics.map((key) => {
             return (
               <tr>
-                <td>{key.props.topic.name}</td>
+                <td>{key.name}</td>
+                <td>{key.description}</td>
+                <td>{key.resources}</td>
               </tr>
             );
           })}
@@ -24,3 +26,4 @@ export const TopicTable = (props) => {
     </div>
   );
 };
+export default TopicTable;
