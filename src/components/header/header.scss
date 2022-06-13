@@ -1,7 +1,8 @@
 @use "../../styles/partials/" as *;
 
 .header {
-  box-shadow: 0 0 4px 1px $primary-color-dark;
+  box-shadow: 0 0 4px 1px $primary-color-highlight;
+  z-index: 1000;
 
   @keyframes pulse {
     0% {

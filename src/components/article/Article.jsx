@@ -24,7 +24,9 @@ const Article = props => {
     <article className="article">
       <h2 className="article__title">{article.title}</h2>
       <p className="article__intro">{article.introduction}</p>
-      <TopicTable topics={article.topics} />
+      <div className="article__table-container">
+        <TopicTable topics={article.topics} />
+      </div>
     </article>
   );
 };
