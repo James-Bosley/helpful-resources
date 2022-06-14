@@ -8,6 +8,9 @@ const SideNav = props => {
     filteredTopics = props.list.filter(topic =>
       topic.title.toLowerCase().includes(props.searchTerm.toLowerCase())
     );
+    if (filteredTopics.length === 0) {
+      filteredTopics = props.list;
+    }
   }
 
   return (
@@ -19,8 +22,10 @@ const SideNav = props => {
         <ul className="side-nav__list">
           {filteredTopics.map(article => {
             return (
-              <li className="side-nav__item" key={v4()}>
-                <NavLink to={`/${article.path}`}>{article.title}</NavLink>
+              <li key={v4()}>
+                <NavLink to={`/${article.path}`} className="side-nav__item">
+                  {article.title}
+                </NavLink>
               </li>
             );
           })}

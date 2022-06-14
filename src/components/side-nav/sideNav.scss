@@ -12,6 +12,7 @@
 }
 
 .side-nav__item {
+  display: block;
   color: $secondary-color-dark;
   @include section-header;
   font-size: 1.5rem !important;
@@ -38,4 +39,11 @@
   padding-left: 2.4rem;
   color: $secondary-color-light;
   background-color: rgb(0, 30, 128);
+}
+
+.active {
+  color: rgb(53, 124, 216);
+  border-left: 0.4rem solid rgb(0, 60, 128);
+  background-color: rgba(98, 168, 234, 0.1);
+  padding-left: 1.7rem;
 }

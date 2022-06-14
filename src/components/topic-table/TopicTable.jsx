@@ -2,6 +2,17 @@ import React from "react";
 import "./TopicTable.scss";
 
 const TopicTable = props => {
+  let filteredTopics = props.topics;
+
+  if (props.searchTerm) {
+    filteredTopics = filteredTopics.filter(topic =>
+      topic.name.toLowerCase().includes(props.searchTerm.toLowerCase())
+    );
+    if (filteredTopics.length === 0) {
+      filteredTopics = props.topics;
+    }
+  }
+
   return (
     <div>
       <table className="table">
@@ -13,7 +24,7 @@ const TopicTable = props => {
           </tr>
         </thead>
         <tbody>
-          {props.topics.map(key => {
+          {filteredTopics.map(key => {
             return (
               <tr className="table__row-body">
                 <td className="table__details table__details--1 "> {key.name}</td>

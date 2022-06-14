@@ -31,7 +31,7 @@ const App = () => {
         <SideNav list={subjectList} searchTerm={searchTerm} />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path=":articleName" element={<Article />} />
+          <Route path=":articleName" element={<Article searchTerm={searchTerm} />} />
         </Routes>
       </main>
     </>

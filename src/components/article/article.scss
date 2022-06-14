@@ -1,8 +1,34 @@
 @use "../../styles/partials/" as *;
 
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 .article {
   margin: 3.6rem;
   width: 80%;
+
+  &__new {
+    animation: fade-in 0.3s linear;
+  }
+
+  &__exit {
+    animation: fade-out 0.3s linear forwards;
+  }
 
   &__title {
     @include page-header;
@@ -17,4 +43,10 @@
   &__info-container {
     width: 75%;
   }
+}
+
+.placeholder {
+  @include page-header;
+  font-size: 2.8rem !important;
+  margin: 10rem auto;
 }
