@@ -1,0 +1,64 @@
+@use "../../styles/partials/" as *;
+
+.header {
+  box-shadow: 0 0 4px 1px $primary-color-highlight;
+
+  @keyframes pulse {
+    0% {
+      transform: scale(1) rotate(-10deg);
+    }
+    50% {
+      transform: scale(1.15) rotate(10deg);
+    }
+    100% {
+      transform: scale(1) rotate(-10deg);
+    }
+  }
+
+  &__container {
+    @include flex(space-between, center);
+    max-width: 140rem;
+    margin: 0 auto;
+
+    & > .active {
+      color: inherit;
+      border-left: none;
+      background-color: inherit;
+      padding-left: 0;
+    }
+  }
+
+  &__title-container {
+    @include flex(initial, center);
+  }
+
+  &__icon-container {
+    height: 8rem;
+    width: 8rem;
+    overflow: hidden;
+    transform: translateX(-0.8rem);
+  }
+
+  &__icon {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    animation: pulse infinite linear 5s;
+  }
+
+  &__title {
+    @include page-header;
+    font-size: 2.2rem !important;
+    font-weight: 600;
+    margin-left: 0.4rem;
+    text-shadow: 0 0 4px $secondary-color-highlight;
+  }
+
+  &__search {
+    font: inherit;
+    width: 24rem;
+    line-height: 0rem;
+    margin-right: 4rem;
+    padding: 0.6rem 0.6rem 0.4rem 0.6rem;
+  }
+}

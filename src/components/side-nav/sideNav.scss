@@ -1,0 +1,49 @@
+@use "../../styles/partials/" as *;
+
+.side-nav__container {
+  margin-top: 3.6rem;
+  width: 18%;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.side-nav__list {
+  list-style-type: none;
+}
+
+.side-nav__item {
+  display: block;
+  color: $secondary-color-dark;
+  @include section-header;
+  font-size: 1.5rem !important;
+  font-weight: 600;
+  padding: 1.4rem 0 1.2rem 2rem;
+  border: 1px solid $secondary-color-highlight;
+  border-top: none;
+
+  &:last-child {
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+  }
+
+  &:hover {
+    color: rgb(53, 124, 216);
+    border-left: 0.4rem solid rgb(0, 60, 128);
+    background-color: rgba(98, 168, 234, 0.1);
+    padding-left: 1.7rem;
+  }
+}
+
+.side-nav__topic-container {
+  padding: 4rem;
+  padding-left: 2.4rem;
+  color: $secondary-color-light;
+  background-color: rgb(0, 30, 128);
+}
+
+.active {
+  color: rgb(53, 124, 216);
+  border-left: 0.4rem solid rgb(0, 60, 128);
+  background-color: rgba(98, 168, 234, 0.1);
+  padding-left: 1.7rem;
+}

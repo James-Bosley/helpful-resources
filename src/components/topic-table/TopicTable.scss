@@ -1,0 +1,60 @@
+@use "../../styles/partials/" as *;
+
+.table {
+  margin-top: 4rem;
+  border-collapse: collapse;
+  border-radius: 4px;
+  border-bottom: 1px solid rgb(200, 200, 200);
+  width: 100%;
+
+  &__header {
+    @include page-header;
+    font-size: 1.9rem !important;
+    border-bottom: 1px solid rgb(200, 200, 200);
+    background-color: #fafafa;
+    text-align: left;
+    padding: 2rem;
+  }
+
+  &__details {
+    border-collapse: collapse;
+
+    padding: 2rem;
+
+    &--1 {
+      font-size: 1.9rem;
+      font-weight: 600;
+      width: 20%;
+    }
+    &--2 {
+      width: 30%;
+      font-weight: 400;
+    }
+    &--3 {
+      width: 50%;
+      font-weight: 400;
+    }
+  }
+
+  &__list {
+    text-decoration: none;
+    list-style-type: none;
+    padding-bottom: 1rem;
+  }
+  &__list:hover {
+    font-weight: 600;
+    color: black;
+  }
+  &__row-body {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 2rem;
+    &:nth-child(even) {
+      background-color: #fafafa;
+    }
+  }
+}
+
+tbody {
+  width: 100%;
+}

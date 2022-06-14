@@ -1,0 +1,28 @@
+@use "./typeface" as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  // Equates 1rem with 10px.
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  // Prevents layout shift when a scrollbar is applied.
+  overflow: overlay;
+}
+
+body {
+  // Explicity sets typeface to match site style as default.
+  @include body-copy;
+}
+
+a {
+  // Removes default anchor styling.
+  text-decoration: none;
+  color: inherit;
+}
