@@ -6,6 +6,7 @@ import SideNav from "./components/side-nav/SideNav";
 import Home from "./components/home/Home";
 import Article from "./components/article/Article";
 import "./app.scss";
+import { AnimatePresence } from "framer-motion";
 
 const App = () => {
   const [subjectList, setSubjectList] = useState([]);
@@ -29,10 +30,12 @@ const App = () => {
       <Header searchTerm={searchTerm} handleChange={handleSearchInput} />
       <main className="main-container">
         <SideNav list={subjectList} searchTerm={searchTerm} />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path=":articleName" element={<Article searchTerm={searchTerm} />} />
-        </Routes>
+        <AnimatePresence exitBeforeEnter>
+          <Routes key={window.location.pathname}>
+            <Route path="/" element={<Home />} />
+            <Route path=":articleName" element={<Article searchTerm={searchTerm} />} />
+          </Routes>
+        </AnimatePresence>
       </main>
     </>
   );

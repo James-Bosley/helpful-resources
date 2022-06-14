@@ -19,6 +19,13 @@
     @include flex(space-between, center);
     max-width: 140rem;
     margin: 0 auto;
+
+    & > .active {
+      color: inherit;
+      border-left: none;
+      background-color: inherit;
+      padding-left: 0;
+    }
   }
 
   &__title-container {
