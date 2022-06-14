@@ -1,8 +1,15 @@
+import { motion } from "framer-motion";
 import "./home.scss";
 
 const Home = () => {
   return (
-    <section className="homepage">
+    <motion.section
+      className="homepage"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.7 }}
+    >
       <h2 className="homepage__title">Welcome to Helpful Resources</h2>
       <p className="homepage__info">
         Congratualtions on making it this far on your web dev journey, we're sure it wasnt easy!
@@ -18,7 +25,7 @@ const Home = () => {
       <p className="homepage__info">
         To get started, click a topic on the left, or search for a topic.
       </p>
-    </section>
+    </motion.section>
   );
 };
 export default Home;
